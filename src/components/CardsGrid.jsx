@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CardInstance from "./CardInstance";
 import { v4 as uuidv4 } from "uuid";
 import "../styles/CardsGrid.css";
 
-function CardsGrid({ gridSize }) {
+function CardsGrid({ gridSize, setScore, setBestScore, score, bestScore }) {
   const [imagesArray, setImagesArray] = useState({
     1: {
       countryCode: "MZ",
@@ -29,9 +29,27 @@ function CardsGrid({ gridSize }) {
 
   const buildImagesArray = (gridSize) => {};
 
+  const [selectedCountries, setSelectedCountries] = useState([]);
+
   const handleCardClick = (countryCode) => {
-    console.log(countryCode);
+    const repeated = selectedCountries.includes(countryCode);
+    if (!repeated) {
+      setSelectedCountries((prevSelectedCountries) => [
+        ...prevSelectedCountries,
+        countryCode,
+      ]);
+      setScore(++score);
+      if (score > bestScore) setBestScore(++bestScore);
+    } else {
+      setScore(0);
+      setSelectedCountries([]);
+    }
   };
+
+  useEffect(() => {
+    console.log(selectedCountries);
+  }, [selectedCountries]);
+
   return (
     <div className="cards-grid">
       {Object.keys(imagesArray).map((index) => {

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./styles/App.css";
-import Score from "./components/Score";
 import Header from "./components/Header";
 import CardsGrid from "./components/CardsGrid";
 
@@ -12,7 +11,13 @@ function App() {
   return (
     <>
       <Header score={score} bestScore={bestScore} />
-      <CardsGrid gridSize={gridSize} />
+      <CardsGrid
+        gridSize={gridSize}
+        setScore={setScore}
+        setBestScore={setBestScore}
+        score={score}
+        bestScore={bestScore}
+      />
     </>
   );
 }
