@@ -1,0 +1,40 @@
+header {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  background-color: var(--header);
+  width: 100%;
+}
+
+header > .title-logo > h1 {
+  margin: 0;
+  color: var(--light-text);
+}
+
+.title-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gh-logo {
+  margin-left: -0.75rem;
+  height: 1.2rem;
+  filter: var(--main-filter);
+}
+
+.gh-logo:hover {
+  transform: rotate(720deg);
+  transition: transform 1s;
+}
+
+.gh-logo:active {
+  filter: invert(8%) sepia(50%) saturate(5142%) hue-rotate(0deg)
+    brightness(104%) contrast(117%);
+}
+
+.gh-logo:focus {
+  outline: #213547 solid 1px;
+}

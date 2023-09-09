@@ -4,8 +4,16 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(61, 61, 61, 0.92);
+  color: #474747;
   background-color: #fcfbf2;
 
+  --main-color: #474747;
+  --main-filter: invert(21%) sepia(0%) saturate(53%) hue-rotate(286deg)
+    brightness(111%) contrast(84%);
   --bg-color: #242424;
+  --header: #efebdd;
+}
+
+p {
+  margin: 0;
 }

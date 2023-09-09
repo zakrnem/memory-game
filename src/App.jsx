@@ -1,21 +1,20 @@
-import { useState } from 'react'
-import 'normalize.css'
-import './App.css'
-import Score from './components/Score'
+import { useState } from "react";
+import "./styles/App.css";
+import Score from "./components/Score";
+import Header from "./components/Header";
+import CardsGrid from "./components/CardsGrid";
 
 function App() {
-  const [score, setScore] = useState(0)
-  const [bestScore, setBestScore] = useState(0)
+  const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
+  const [gridSize, setGridSize] = useState(4);
 
   return (
     <>
-      <h1>Memory game</h1>
-      <Score 
-      score={score}
-      bestScore={bestScore}
-      />
+      <Header score={score} bestScore={bestScore} />
+      <CardsGrid gridSize={gridSize} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

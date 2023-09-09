@@ -1,0 +1,8 @@
+.score {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  padding: 0.7rem;
+  border: solid 2px var(--main-color);
+  border-radius: 0.7rem;
+}
