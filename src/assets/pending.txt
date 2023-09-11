@@ -1,9 +1,3 @@
-Create static page layout:
-    Display images using a css grid.
-
 Create the countries object, it should have:
     The code or abbreviation of the name of the country.
     The name of the country.
-    Maybe instead of a JSON file it should a JS Function,
-        that when it's called returns a random array of 'N' countries,
-        checking that a instance isn't repeated.
