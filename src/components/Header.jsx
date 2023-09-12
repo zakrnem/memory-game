@@ -1,10 +1,9 @@
 import imgUrl from "../assets/github-svgrepo-com.svg";
 import "../styles/Header.css";
-import Score from "./Score";
 
-function Header({ score, bestScore }) {
+function Header() {
   return (
-    <header>
+    <>
       <div className="title-logo">
         <h1>Memory game</h1>
         <a
@@ -16,8 +15,7 @@ function Header({ score, bestScore }) {
           <img src={imgUrl} className="gh-logo" />
         </a>
       </div>
-      <Score score={score} bestScore={bestScore} />
-    </header>
+    </>
   );
 }
 
