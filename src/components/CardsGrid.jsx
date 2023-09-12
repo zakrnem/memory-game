@@ -3,12 +3,16 @@ import CardInstance from "./CardInstance";
 import { v4 as uuidv4 } from "uuid";
 import "../styles/CardsGrid.css";
 
-function CardsGrid({ gridSize, setScore, setBestScore, score, bestScore }) {
+function CardsGrid({
+  gridSize,
+  setScore,
+  setBestScore,
+  score,
+  bestScore,
+  setGridSize,
+}) {
   const [imagesArray, setImagesArray] = useState({});
-
-  /*  useEffect(() => {
-    console.log(imagesArray);
-  }, [imagesArray]); */
+  const [prevGridSize, setPrevGridSize] = useState([gridSize]);
 
   useEffect(() => {
     const imagesObj = {
@@ -171,11 +175,22 @@ function CardsGrid({ gridSize, setScore, setBestScore, score, bestScore }) {
     };
 
     buildImagesArray();
+
+    return () => {
+      setGridSize(0);
+      setPrevGridSize([...prevGridSize, gridSize]);
+      buildImagesArray();
+    };
   }, [gridSize]);
 
   const [selectedCountries, setSelectedCountries] = useState([]);
 
   const handleCardClick = (countryCode) => {
+    setImagesArray({});
+    const prevGridSizeIndex = prevGridSize.length - 1;
+    const prevGridSizeInstance = prevGridSize[prevGridSizeIndex];
+    setGridSize(prevGridSizeInstance);
+
     const repeated = selectedCountries.includes(countryCode);
     if (!repeated) {
       setSelectedCountries((prevSelectedCountries) => [
@@ -190,9 +205,9 @@ function CardsGrid({ gridSize, setScore, setBestScore, score, bestScore }) {
     }
   };
 
-  useEffect(() => {
-    //console.log(selectedCountries);
-  }, [selectedCountries]);
+  /*   useEffect(() => {
+    console.log(imagesArray);
+  }, [imagesArray]); */
 
   return (
     <div className="cards-grid">

@@ -6,7 +6,7 @@ import CardsGrid from "./components/CardsGrid";
 function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-  const [gridSize, setGridSize] = useState(4);
+  const [gridSize, setGridSize] = useState(10);
 
   return (
     <>
@@ -17,6 +17,7 @@ function App() {
         setBestScore={setBestScore}
         score={score}
         bestScore={bestScore}
+        setGridSize={setGridSize}
       />
     </>
   );
