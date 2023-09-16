@@ -1,3 +1,5 @@
+import "../styles/Difficulty.css";
+
 function Difficulty({ setGridSize, gridSize }) {
   const handleChange = (value) => {
     setGridSize(value);

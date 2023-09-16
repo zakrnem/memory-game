@@ -1,6 +1,7 @@
 header {
   display: grid;
   justify-content: center;
+  justify-items: center;
   gap: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
