@@ -286,7 +286,6 @@ function App() {
       const currIndex = Object.keys(updatedImagesArray).length;
       const value = imagesObj[randomIndex];
 
-
       if (currIndex - count < 0) {
         count = currIndex;
       }
@@ -305,7 +304,6 @@ function App() {
         count--;
       }
     }
-
     setImagesArray(updatedImagesArray);
   };
 
@@ -339,7 +337,7 @@ function App() {
       <header>
         <Header setGridSize={setGridSize} />
         <Score score={score} bestScore={bestScore} />
-        <Difficulty setGridSize={setGridSize} gridSize={gridSize}/>
+        <Difficulty setGridSize={setGridSize} gridSize={gridSize} />
       </header>
       <CardsGrid imagesArray={imagesArray} handleCardClick={handleCardClick} />
     </>

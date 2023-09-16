@@ -10,7 +10,7 @@
 .card-instance > button {
   border: none;
   background-color: var(--white);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   transition: box-shadow 0.3s ease;
   font-size: 0.9rem;
 }
