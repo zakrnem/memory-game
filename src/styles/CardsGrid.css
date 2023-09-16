@@ -6,3 +6,23 @@
   flex-grow: 1;
   width: 100%;
 }
+
+.card-instance > button {
+  border: none;
+  background-color: var(--white);
+  border-radius: .4rem;
+  transition: box-shadow 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.card-instance > button:hover {
+  box-shadow: 1px 1px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-instance > button:active {
+  box-shadow: 1px 1px 7px 10px rgba(0, 195, 255, 0.2);
+}
+
+.card-instance > button > img {
+  margin-bottom: -10px;
+}

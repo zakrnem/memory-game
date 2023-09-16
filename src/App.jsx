@@ -146,7 +146,7 @@ function App() {
     },
     27: {
       countryCode: "SY",
-      countryName: "Syrian Arab Republic",
+      countryName: "Syria",
       key: uuidv4(),
     },
     28: {
