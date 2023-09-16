@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-  const [gridSize, setGridSize] = useState(4);
+  const [gridSize, setGridSize] = useState(6);
   const [imagesArray, setImagesArray] = useState({});
   const [selectedCountries, setSelectedCountries] = useState([]);
 
@@ -144,6 +144,136 @@ function App() {
       countryName: "Uruguay",
       key: uuidv4(),
     },
+    27: {
+      countryCode: "SY",
+      countryName: "Syrian Arab Republic",
+      key: uuidv4(),
+    },
+    28: {
+      countryCode: "TT",
+      countryName: "Trinidad and Tobago",
+      key: uuidv4(),
+    },
+    29: {
+      countryCode: "TW",
+      countryName: "Taiwan",
+      key: uuidv4(),
+    },
+    30: {
+      countryCode: "SO",
+      countryName: "Somalia",
+      key: uuidv4(),
+    },
+    31: {
+      countryCode: "SK",
+      countryName: "Slovakia",
+      key: uuidv4(),
+    },
+    32: {
+      countryCode: "SI",
+      countryName: "Slovenia",
+      key: uuidv4(),
+    },
+    33: {
+      countryCode: "SG",
+      countryName: "Singapore",
+      key: uuidv4(),
+    },
+    34: {
+      countryCode: "RO",
+      countryName: "Romania",
+      key: uuidv4(),
+    },
+    35: {
+      countryCode: "PR",
+      countryName: "Puerto Rico",
+      key: uuidv4(),
+    },
+    36: {
+      countryCode: "PH",
+      countryName: "Philippines",
+      key: uuidv4(),
+    },
+    37: {
+      countryCode: "PA",
+      countryName: "Panama",
+      key: uuidv4(),
+    },
+    38: {
+      countryCode: "NL",
+      countryName: "Netherlands",
+      key: uuidv4(),
+    },
+    39: {
+      countryCode: "MT",
+      countryName: "Malta",
+      key: uuidv4(),
+    },
+    40: {
+      countryCode: "MN",
+      countryName: "Mongolia",
+      key: uuidv4(),
+    },
+    41: {
+      countryCode: "MG",
+      countryName: "Madagascar",
+      key: uuidv4(),
+    },
+    42: {
+      countryCode: "ML",
+      countryName: "Mali",
+      key: uuidv4(),
+    },
+    43: {
+      countryCode: "ME",
+      countryName: "Montenegro",
+      key: uuidv4(),
+    },
+    44: {
+      countryCode: "LI",
+      countryName: "Liechtenstein",
+      key: uuidv4(),
+    },
+    45: {
+      countryCode: "LU",
+      countryName: "Luxembourg",
+      key: uuidv4(),
+    },
+    46: {
+      countryCode: "LV",
+      countryName: "Latvia",
+      key: uuidv4(),
+    },
+    47: {
+      countryCode: "LT",
+      countryName: "Lithuania",
+      key: uuidv4(),
+    },
+    48: {
+      countryCode: "LB",
+      countryName: "Lebanon",
+      key: uuidv4(),
+    },
+    49: {
+      countryCode: "KR",
+      countryName: "South Korea",
+      key: uuidv4(),
+    },
+    50: {
+      countryCode: "KM",
+      countryName: "Comoros",
+      key: uuidv4(),
+    },
+    51: {
+      countryCode: "IS",
+      countryName: "Iceland",
+      key: uuidv4(),
+    },
+    52: {
+      countryCode: "JE",
+      countryName: "Jersey",
+      key: uuidv4(),
+    },
   };
 
   const buildImagesArray = () => {
@@ -152,7 +282,7 @@ function App() {
     let prevRandomIndexes = [];
 
     while (count < gridSize) {
-      const randomIndex = Math.floor(Math.random() * 26) + 1;
+      const randomIndex = Math.floor(Math.random() * 51) + 1;
       const currIndex = Object.keys(updatedImagesArray).length;
       const value = imagesObj[randomIndex];
 
