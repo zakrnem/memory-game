@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function CardInstance({ countryCode, countryName, handleCardClick }) {
   return (
     <div className="card-instance">
@@ -8,5 +10,11 @@ function CardInstance({ countryCode, countryName, handleCardClick }) {
     </div>
   );
 }
+
+CardInstance.propTypes = {
+  countryCode: PropTypes.string,
+  countryName: PropTypes.string,
+  handleCardClick: PropTypes.func,
+};
 
 export default CardInstance;
